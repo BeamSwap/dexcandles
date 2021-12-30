@@ -1,12 +1,12 @@
 specVersion: 0.0.2
 description: DEX trades candles (5m/15m/1h/4h/1d/1w)
-repository: https://github.com/1inch-exchange
+repository: https://github.com/BeamSwap/dexcandles
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: mainnet
+    network: moonbeam
     source:
       address: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
       abi: Factory
@@ -27,7 +27,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pair
-    network: mainnet
+    network: moonbeam
     source:
       abi: Pair
     mapping:
